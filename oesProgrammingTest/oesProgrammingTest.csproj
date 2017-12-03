@@ -154,6 +154,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmotionAnalyzerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -169,11 +170,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\anger.jpg" />
+    <Content Include="images\disgust.jpg" />
+    <Content Include="images\fear.jpg" />
+    <Content Include="images\Inside-Out-Characters.jpg" />
+    <Content Include="images\joy.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\oesProgrammingTest - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -197,8 +204,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\EmotionAnalyzer\Index.cshtml" />
+    <Content Include="Views\EmotionAnalyzer\Upload.cshtml" />
+    <Content Include="Views\EmotionAnalyzer\Analyze.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AnalyzeDirectory\" />
     <Folder Include="App_Data\" />
     <Folder Include="Uploads\" />
   </ItemGroup>

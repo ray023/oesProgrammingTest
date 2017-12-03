@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+Pick your character
+<img src="~/images/Inside-Out-Characters.jpg" />
+
+@using (Html.BeginForm("Upload", "EmotionAnalyzer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload a file to process:</label>
+    <input type="file" class="btn btn-default" name="file" id="file" /><br><br>
+    <input type="submit" class="btn btn-sm btn-default" value="Upload File" />
+}

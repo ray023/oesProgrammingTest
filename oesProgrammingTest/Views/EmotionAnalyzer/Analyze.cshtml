@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Emotion Analyze";
+}
+
+<img src="~/Uploads/@ViewBag.CurrentFile" height="400" width="400" class="img-thumbnail">
+
+<div class="container">
+    @foreach (var classMate in ViewBag.ClassMates)
+    {
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/AnalyzeDirectory/@classMate.FileName" height="200" width="200" class="img-thumbnail">
+            </div>
+            <div class="col-md-2">
+                @classMate.GetBiggestEmotion().Emotion
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Emotion Index";
+}
+
+Emotion Index
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var uploadedFile in ViewBag.UploadFiles)
+            {
+            <div class="col">
+                <a href="EmotionAnalyzer/Analyze?fileName=@uploadedFile">
+                    <img src="Uploads/@uploadedFile" height="400" width="400" class="img-thumbnail">
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@Html.ActionLink("Upload", "Upload", "EmotionAnalyzer")<br />
+@Html.ActionLink("Analyze", "Analyze", "EmotionAnalyzer")<br />
